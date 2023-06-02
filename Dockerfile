@@ -1,4 +1,4 @@
-FROM ubuntu+20.04
+FROM ubuntu:20.04
 MAINTAINER st062944
 RUN apt-get update -y
 COPY . /opt/gsom_predictor
