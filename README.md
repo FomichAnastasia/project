@@ -10,15 +10,6 @@ In the [file](https://github.com/FomichAnastasia/project/blob/main/HW1%20(4).ipy
 
 [Here](https://github.com/FomichAnastasia/project/blob/main/HW2%20(3).ipynb) all model creation steps are presented. What is important here is that in the result xgboost model was chosen. Cathegorical featrues were not transformed to dummy variables to simplify the interface and error without dummies didn't increase significantly. 
 
-## Install instructions and run app with virtual environment
-
-### Check ports
-
-As we specified ports in the [app](https://github.com/FomichAnastasia/project/blob/master/app.py) - , we need to specify port in the the remote VM port with following commands:
-```
-sudo apt install ufw # if you don't have it already
-sudo ufw allow 5444 
-```
 
 ## Information about Dockerfile and describe it's content
 
@@ -44,8 +35,39 @@ Here you can see all content of the working directory but we don't need all of t
 ![image](https://github.com/FomichAnastasia/project/assets/114520431/7dae5499-6a7f-49cd-a705-b93674c4ba3d)
 
 So, we specified what files should be excluded from docker with [dockerignore](https://github.com/FomichAnastasia/project/blob/master/.dockerignore) file
- 
 
-How to open the port in your remote VM
-	
-How to run app using docker and which port it uses
+## Install instructions and run app with virtual environment
+
+### How to start work with VM
+
+Firstly, create your own VM. We will use [Yandex VM](https://console.cloud.yandex.ru/folders/b1gbrh8lv3mtr0l2eo47/compute/instances). 
+
+Make the connection to your VM and go to the VM
+
+```
+ssh-rsa your_key
+ssh login@vm_address
+```
+
+### How to open the port in your remote VM
+
+As we specified ports in the [app](https://github.com/FomichAnastasia/project/blob/master/app.py) - , we need to specify port in the the remote VM port with following commands:
+```
+sudo apt install ufw # if you don't have it already
+sudo ufw allow 5444 
+```
+![image](https://github.com/FomichAnastasia/project/assets/114520431/46dda731-462a-4f7b-be99-a5be9d37cabe)
+
+### How to add data to the VM
+
+Firstly, if you don't have docker, please follow the instructions from the official [site](https://docs.docker.com/engine/install/ubuntu/)
+
+```
+git clone --branch master https://github.com/FomichAnastasia/project.git # add project to your VM
+cd project # go to the project folder
+docker build -t <your login>/<directory>:<version> . #just here docker build -t st062944/gsom_predictor:1.1 .
+#wait for all installations
+
+## How to run app using docker
+
+
