@@ -8,9 +8,9 @@
 
 We will predict with this project the prices of **selling**! 
 
-In the [file](https://github.com/FomichAnastasia/project/blob/main/HW1%20(4).ipynb) all necessary operations and visualizations are given
+In the [file](https://github.com/FomichAnastasia/project/blob/main/Statistics.ipynb) all necessary operations and visualizations are given
 
-[Here](https://github.com/FomichAnastasia/project/blob/main/HW2%20(3).ipynb) all model creation steps are presented. What is important here is that in the result xgboost model was chosen. Cathegorical featrues were not transformed to dummy variables to simplify the interface and error without dummies didn't increase significantly. 
+[Here](https://github.com/FomichAnastasia/project/blob/main/Models.ipynb) all model creation steps are presented. What is important here is that in the result **xgboost model was chosen**. Cathegorical featrues were not transformed to dummy variables to simplify the interface and error without dummies didn't increase significantly. 
 
 
 ## Information about Dockerfile and describe it's content
