@@ -10,7 +10,7 @@ We will predict with this project the prices of **selling**!
 
 In the [file](https://github.com/FomichAnastasia/project/blob/main/Statistics.ipynb) all necessary operations and visualizations are given
 
-[Here](https://github.com/FomichAnastasia/project/blob/main/Models.ipynb) all model creation steps are presented. What is important here is that in the result **xgboost model was chosen**. Cathegorical featrues were not transformed to dummy variables to simplify the interface and error without dummies didn't increase significantly. 
+[Here](https://github.com/FomichAnastasia/project/blob/main/Models.ipynb) all model creation steps are presented. What is important here is that in the result **xgboost model was chosen**. Cathegorical features were not transformed to dummy variables to simplify the interface and error without dummies didn't increase significantly. 
 
 
 ## Information about Dockerfile and describe it's content
@@ -32,7 +32,7 @@ cmd python3 app.py # run the [app](https://github.com/FomichAnastasia/project/bl
  
 ### What files are inside our docker container?
 
-Here you can see all content of the working directory but we don't need all of the files to be added to docker. In the git hub folder you can find all source (исходные?) files but not all of them will be included into the docker. Moreover, here you can see **env** folder which is not included in git files ass well because it was added i gitignore file too.
+Here you can see all content of the working directory but we don't need all of the files to be added to docker. In the git hub folder you can find all source (исходные?) files but not all of them will be included into the docker. Moreover, here you can see **env** folder which is not included in git files as well because it was added in gitignore file too.
  
 ![image](https://github.com/FomichAnastasia/project/assets/114520431/7dae5499-6a7f-49cd-a705-b93674c4ba3d)
 
