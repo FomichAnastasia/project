@@ -52,8 +52,9 @@ ssh login@vm_address
 ### How to open the port in your remote VM
 
 As we specified ports in the [app](https://github.com/FomichAnastasia/project/blob/master/app.py) - , we need to specify port in the the remote VM port with following commands:
+
 ```
-sudo apt install ufw # if you don't have it already
+sudo apt install ufw 
 sudo ufw allow 5444 
 ```
 ![image](https://github.com/FomichAnastasia/project/assets/114520431/46dda731-462a-4f7b-be99-a5be9d37cabe)
@@ -62,12 +63,37 @@ sudo ufw allow 5444
 
 Firstly, if you don't have docker, please follow the instructions from the official [site](https://docs.docker.com/engine/install/ubuntu/)
 
+As you have docker installed, we can start working with project.
+
+add project to your VM
 ```
-git clone --branch master https://github.com/FomichAnastasia/project.git # add project to your VM
-cd project # go to the project folder
-docker build -t <your login>/<directory>:<version> . #just here docker build -t st062944/gsom_predictor:1.1 .
-#wait for all installations
+git clone --branch master https://github.com/FomichAnastasia/project.git 
+```
 
 ## How to run app using docker
+
+Go to the project folder
+```
+cd project 
+```
+You can check the last version of the docker image with **docker images** command
+
+Run the current latest version of the docker
+```
+docker run --network host -d st062944/gsom_predictor:v.0.2 #
+```
+Check that it is working with  **docker ps** command - output should not be empty
+
+Go to the [Postman](https://web.postman.co/), create an account if you need -> **Workspaces** -> **Your workspace**, create the new one of ypu need -> add in the **Get** the following request
+
+```
+vm_address:5444/prediction_test?floor=5&rooms=2&area=64&kitchen_area=23&living_area=30&agent_fee=0&price_per_sq_m=10000&house_price_sqm_median_cleaned=300000&house_price_sqm_median_cleaned=35000&days_exposition=130&price_for_rent=23000
+```
+You can change request with different imputs of variables (numbers after =)
+
+The example of the Postman interface is below
+
+![image](https://github.com/FomichAnastasia/project/assets/114520431/373a9b49-d17d-41da-ad36-9dcbac01c762)
+
 
 
