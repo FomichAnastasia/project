@@ -82,7 +82,7 @@ You can check the last version of the docker image with **docker images** comman
 
 Run the current latest version of the docker
 ```
-docker run --network host -d st062944/gsom_predictor:v.0.2 #
+docker run --network host -d st062944/gsom_predictor:v.0.2 
 ```
 Check that it is working with  **docker ps** command - output should not be empty
 
@@ -96,6 +96,14 @@ You can change request with different imputs of variables (numbers after =)
 The example of the Postman interface is below
 
 ![image](https://github.com/FomichAnastasia/project/assets/114520431/373a9b49-d17d-41da-ad36-9dcbac01c762)
+
+### Close docker
+
+To end work with docker file, find the name of the docker with 
+```
+docker ps
+docker stop NAMES
+```
 
 
 
