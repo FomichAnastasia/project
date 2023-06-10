@@ -14,7 +14,7 @@ In the [file](https://github.com/FomichAnastasia/project/blob/main/Statistics.ip
 
 Important note - git hub folder project has two branches - main (with overall instructions and notebooks with data operations) and master (with app and docker files).
 
-## Information about Dockerfile and describe it's content
+## Add information about Dockerfile and describe it's content
 
 ### Dockerfile
  
