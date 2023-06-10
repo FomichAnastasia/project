@@ -12,7 +12,7 @@ In the [file](https://github.com/FomichAnastasia/project/blob/main/Statistics.ip
 
 [Here](https://github.com/FomichAnastasia/project/blob/main/Models.ipynb) all model creation steps are presented. What is important is that in the result **xgboost model was chosen**. Cathegorical features were not transformed to dummy variables to simplify the interface and error without dummies didn't increase significantly. 
 
-Important note - got hub folder project has two branches - main (with overall instructions and notebooks with data operations) and master (with app and docker files).
+Important note - git hub folder project has two branches - main (with overall instructions and notebooks with data operations) and master (with app and docker files).
 
 ## Information about Dockerfile and describe it's content
 
