@@ -30,13 +30,13 @@ run pip install -r requirements.txt # install all necessary labs from [requireme
 cmd python3 app.py # run the [app](https://github.com/FomichAnastasia/project/blob/master/app.py)
  ```
  
-### What files are inside our docker? 
+### What files are inside our docker container?
 
-Here you can see all content of the working directory but we don't need all of the files to be added to docker
+Here you can see all content of the working directory but we don't need all of the files to be added to docker. In the git hub folder you can find all source (исходные?) files but not all of them will be included into the docker. Moreover, here you can see **env** folder which is not included in git files ass well because it was added i gitignore file too.
  
 ![image](https://github.com/FomichAnastasia/project/assets/114520431/7dae5499-6a7f-49cd-a705-b93674c4ba3d)
 
-So, we specified what files should be excluded from docker with [dockerignore](https://github.com/FomichAnastasia/project/blob/master/.dockerignore) file
+So, we specified what files should be excluded from docker with [dockerignore](https://github.com/FomichAnastasia/project/blob/master/.dockerignore) file and [gitigonore](https://github.com/FomichAnastasia/project/blob/master/.gitignore) file.
 
 ## Install instructions and run app with virtual environment
 
@@ -65,7 +65,9 @@ sudo ufw allow 5444
 
 Firstly, if you don't have docker, please follow the instructions from the official [site](https://docs.docker.com/engine/install/ubuntu/)
 
-As you have docker installed, we can start working with project.
+As you have docker installed, we can start working with project. We can follow two ways. 
+
+#### First one is to work with github data.
 
 add project to your VM
 ```
@@ -77,6 +79,10 @@ git clone --branch master https://github.com/FomichAnastasia/project.git
 Go to the project folder
 ```
 cd project 
+```
+#### Second variant
+```
+docker pull st062944/gsom_predictor:v.0.2
 ```
 You can check the last version of the docker image with **docker images** command
 
