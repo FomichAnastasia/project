@@ -65,6 +65,8 @@ sudo ufw allow 5444
 
 Firstly, if you don't have docker, please follow the instructions from the official [site](https://docs.docker.com/engine/install/ubuntu/)
 
+## How to run app using docker
+
 As you have docker installed, we can start working with project. We can follow two ways. 
 
 #### First one is to work with github data.
@@ -73,9 +75,6 @@ add project to your VM
 ```
 git clone --branch master https://github.com/FomichAnastasia/project.git 
 ```
-
-## How to run app using docker
-
 Go to the project folder
 ```
 cd project 
